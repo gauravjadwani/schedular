@@ -1,19 +1,22 @@
 <html>
-<head>
-  <title>Test Calculator</title>
-</head>
-<body>
-  <script src='./schedular.js'></script>
-  <script>
-    function mycallback(param){
-    console.log("Do this task in "+param[0])
-}
 
-const sc = new schedular()
-const schedule1 = sc.shedule(mycallback, ["who"], 5000)
-// sc.delete(schedule1)
-const schedule2 = sc.shedule(mycallback, ["Is"], 6000)
-sc.showSchedule()
-  </script>
+<head>
+    <title>Test schedular</title>
+</head>
+
+<body>
+    <script src='./schedular.js'></script>
+    <script>
+        function mycallback(param) {
+            console.log("Do this task with params " + param[0]+param[1])
+        }
+
+        const sc = new schedular()
+        const schedule1 = sc.shedule(mycallback, ["First" ,"Task"], 5000)
+        // sc.delete(schedule1)
+        const schedule2 = sc.shedule(mycallback, ["Is"], 6000)
+        sc.showSchedule()
+    </script>
 </body>
+
 </html>

@@ -5,16 +5,15 @@ class Schedular{
     shedule(callBackfunction, params, time){
       console.log("Hey I am scheduled")
       const scheduleId = setTimeout(function(){
-        // callBackfunction.call(this,params)
+        console.log("params",params)
         callBackfunction.apply(this,params)
       },time)
 
       this.schedularIds[scheduleId] = scheduleId
-      console.log("schedule",this.schedularIds)
-      return scheduleId
+      return this.schedularIds[scheduleId]
     }
-    delete(id=''){
-      if(id){
+    delete(id){
+      if(id && this.schedularIds[id]){
         clearTimeout(id)
         delete this.schedularIds[id]
       }else{
@@ -22,8 +21,10 @@ class Schedular{
       }
       
     }
-    showSchedule(){
-      return this.schedularIds
+    showSchedule(id){
+        if(id && this.schedularIds[id]){
+            return this.schedularIds[id]
+        }
     }
 }
   
