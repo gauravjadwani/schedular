@@ -1,11 +1,3 @@
-// module.exports = {
-//     add: (num1, num2) => num1 + num2,
-//     sub: (num1, num2) => num1 - num2,
-//   };
-
-
-
-
 class Schedular{
     constructor(){
       this.schedularIds={}
@@ -33,11 +25,10 @@ class Schedular{
     showSchedule(){
       return this.schedularIds
     }
-}
+  }
   
 
 module.exports = Schedular
-// export default Schedular
 //   function mycallback(param){
 //     console.log("Do this task in "+param[0])
 //   }

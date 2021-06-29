@@ -3,11 +3,20 @@
   <title>Test Calculator</title>
 </head>
 <body>
-  <script src='./calculator.js'></script>
+  <script src='./schedular.js'></script>
   <script>
-    const {add, sub} = calculator;
-    console.log('1 + 2 = ' + add(1, 2));
-    console.log('2 - 1 = ' + sub(2, 1));
+    // const {add, sub} = calculator;
+    // console.log('1 + 2 = ' + add(1, 2));
+    // console.log('2 - 1 = ' + sub(2, 1));
+    function mycallback(param){
+    console.log("Do this task in "+param[0])
+}
+
+const sc = new schedular()
+const schedule1 = sc.shedule(mycallback, ["who"], 5000)
+// sc.delete(schedule1)
+const schedule2 = sc.shedule(mycallback, ["Is"], 6000)
+sc.showSchedule()
   </script>
 </body>
 </html>

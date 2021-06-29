@@ -2,10 +2,10 @@
   "name": "schedular",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/calculator.js",
+  "main": "dist/schedular.js",
   "scripts": {
-    "build:browser": "webpack && cp dist/calculator.js examples/browser",
-    "build:node": "webpack && cp dist/calculator.js examples/node/ && node examples/node/example.js",
+    "build:browser": "webpack && cp dist/schedular.js examples/browser",
+    "build:node": "webpack && cp dist/schedular.js examples/node/ && node examples/node/example.js",
     "build": "webpack"
   },
   "repository": {
